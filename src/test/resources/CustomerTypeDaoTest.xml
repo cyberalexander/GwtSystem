@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="/../../../dbxsd/dataset.xsd">
+
+    <T_CUSTOMER_TYPES F_CUSTOMER_TYPE_ID="1" F_CUSTOMER_TYPE_CAPTION="customerTypeCaption1"/>
+    <T_CUSTOMER_TYPES F_CUSTOMER_TYPE_ID="2" F_CUSTOMER_TYPE_CAPTION="customerTypeCaption2"/>
+    <T_CUSTOMER_TYPES F_CUSTOMER_TYPE_ID="3" F_CUSTOMER_TYPE_CAPTION="customerTypeCaption3"/>
+</dataset>

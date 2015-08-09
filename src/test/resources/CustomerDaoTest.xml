@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="/../../../dbxsd/dataset.xsd">
+
+    <T_CUSTOMERS F_CUSTOMER_ID="1"
+                 F_TITLE="Dr"
+                 F_FIRST_NAME="Fred"
+                 F_FIRST_NAME_METAPHONE="FRT"
+                 F_LAST_NAME="Clark"
+                 F_LAST_NAME_METAPHONE="KLRK"
+                 F_TYPE="1"
+                 />
+
+    <T_CUSTOMERS F_CUSTOMER_ID="2"
+                 F_TITLE="Mr"
+                 F_FIRST_NAME="Anderson"
+                 F_FIRST_NAME_METAPHONE="ANTRSN"
+                 F_LAST_NAME="Lee"
+                 F_LAST_NAME_METAPHONE="L"
+                 F_TYPE="2"
+            />
+
+    <T_CUSTOMER_TYPES F_CUSTOMER_TYPE_ID="1" F_CUSTOMER_TYPE_CAPTION="customerTypeCaption3"/>
+    <T_CUSTOMER_TYPES F_CUSTOMER_TYPE_ID="2" F_CUSTOMER_TYPE_CAPTION="customerTypeCaption3"/>
+</dataset>

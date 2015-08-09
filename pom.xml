@@ -1,0 +1,364 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.gwtsystem</groupId>
+    <artifactId>GwtSystem</artifactId>
+    <packaging>war</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <name>GwtSystem Maven Webapp</name>
+    <url>http://maven.apache.org</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <compiler-plugin.version>3.3</compiler-plugin.version>
+        <flyway.version>3.1</flyway.version>
+        <jdk.version>1.7</jdk.version>
+        <gwt.version>2.7.0</gwt.version>
+        <spring.version>4.1.6.RELEASE</spring.version>
+        <aspectj.version>1.8.4</aspectj.version>
+        <cglib.version>3.1</cglib.version>
+        <spring4gwt.version>0.0.1</spring4gwt.version>
+        <dbcp.version>1.4</dbcp.version>
+        <hibernate.version>4.3.10.Final</hibernate.version>
+        <hibernate.validator.version>5.1.3.Final</hibernate.validator.version>
+        <hibernate.jpa.version>1.0.0.Final</hibernate.jpa.version>
+        <jsr.validation.version>1.1.0.Final</jsr.validation.version>
+        <mysql.version>5.1.34</mysql.version>
+        <servlet.version>3.1.0</servlet.version>
+        <jsp.version>2.3.1</jsp.version>
+        <jstl.version>1.2</jstl.version>
+        <log4j.version>1.2.17</log4j.version>
+        <slf4j.version>1.7.12</slf4j.version>
+        <junit.version>4.11</junit.version>
+        <unitils.version>3.4.2</unitils.version>
+        <mockito.version>1.10.19</mockito.version>
+        <metaphone.version>1.10</metaphone.version>
+    </properties>
+
+    <dependencies>
+
+        <!-- Spring -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aop</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-orm</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${spring.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!--CgLib-->
+        <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib</artifactId>
+            <version>${cglib.version}</version>
+        </dependency>
+        <!--AspectJ-->
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>${aspectj.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjrt</artifactId>
+            <version>${aspectj.version}</version>
+        </dependency>
+
+        <!-- Connection Pool -->
+        <dependency>
+            <groupId>commons-dbcp</groupId>
+            <artifactId>commons-dbcp</artifactId>
+            <version>${dbcp.version}</version>
+        </dependency>
+
+        <!-- Hibernate -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>${hibernate.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>${hibernate.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate.javax.persistence</groupId>
+            <artifactId>hibernate-jpa-2.1-api</artifactId>
+            <version>${hibernate.jpa.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>${hibernate.validator.version}</version>
+        </dependency>
+
+        <!-- jsr303 validation -->
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>${jsr.validation.version}</version>
+        </dependency>
+
+        <!-- MySQL -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.version}</version>
+        </dependency>
+
+        <!-- Junit -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+        </dependency>
+
+        <!-- Unitils Test Libraries -->
+        <dependency>
+            <groupId>org.unitils</groupId>
+            <artifactId>unitils-spring</artifactId>
+            <version>${unitils.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.unitils</groupId>
+            <artifactId>unitils-dbunit</artifactId>
+            <version>${unitils.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.unitils</groupId>
+            <artifactId>unitils-io</artifactId>
+            <version>${unitils.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Mockito Test -->
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-all</artifactId>
+            <version>${mockito.version}</version>
+        </dependency>
+
+        <!-- Commons Metaphone -->
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>${metaphone.version}</version>
+        </dependency>
+
+        <!-- -= GWT =- -->
+        <dependency>
+            <groupId>com.google.gwt</groupId>
+            <artifactId>gwt-servlet</artifactId>
+            <version>${gwt.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.gwt</groupId>
+            <artifactId>gwt-user</artifactId>
+            <version>${gwt.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.gwt</groupId>
+            <artifactId>gwt-dev</artifactId>
+            <version>${gwt.version}</version>
+        </dependency>
+
+        <!-- Spring-GWT integration -->
+        <dependency>
+            <groupId>com.google.code</groupId>
+            <artifactId>spring4gwt</artifactId>
+            <version>${spring4gwt.version}</version>
+        </dependency>
+
+        <!-- FlyWay core -->
+        <dependency>
+            <groupId>com.googlecode.flyway</groupId>
+            <artifactId>flyway-core</artifactId>
+            <version>2.3.1</version>
+        </dependency>
+
+        <!-- GWT logger -->
+        <dependency>
+            <groupId>com.google.code.gwt-log</groupId>
+            <artifactId>gwt-log</artifactId>
+            <version>2.6.2</version>
+        </dependency>
+
+        <!--log4j-->
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>${log4j.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.sun.jdmk</groupId>
+                    <artifactId>jmxtools</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.sun.jmx</groupId>
+                    <artifactId>jmxri</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.ow2.asm</groupId>
+            <artifactId>asm</artifactId>
+            <version>5.0.3</version>
+        </dependency>
+        <dependency>
+            <groupId>asm</groupId>
+            <artifactId>asm</artifactId>
+            <version>3.3.1</version>
+        </dependency>
+
+    </dependencies>
+
+
+    <build>
+        <finalName>GwtSystem</finalName>
+
+        <plugins>
+            <plugin>
+                <groupId>org.flywaydb</groupId>
+                <artifactId>flyway-maven-plugin</artifactId>
+                <version>${flyway.version}</version>
+                <!--<configuration>
+                    <driver>com.mysql.jdbc.Driver</driver>
+                    <url>jdbc:mysql://localhost:3306/isystem?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;connectionCollation=utf8_general_ci&amp;characterSetResults=UTF-8</url>
+                    <user>root</user>
+                    <password>1234</password>
+                    <locations>
+                        <location>db.migration</location>
+                    </locations>
+                </configuration>
+                <goals>
+                    <goal>validate</goal>
+                </goals>
+                <dependencies>
+                    <dependency>
+                        <groupId>mysql</groupId>
+                        <artifactId>mysql-connector-java</artifactId>
+                        <version>${mysql.version}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>com.googlecode.flyway</groupId>
+                        <artifactId>flyway-core</artifactId>
+                        <version>2.3.1</version>
+                    </dependency>
+                </dependencies>-->
+            </plugin>
+
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>gwt-maven-plugin</artifactId>
+                <version>${gwt.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>compile</goal>
+                            <!--<goal>generateAsync</goal>-->
+                            <!-- added me -->
+                            <goal>test</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- Compiler Plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${compiler-plugin.version}</version>
+                <configuration>
+                    <source>${jdk.version}</source>
+                    <target>${jdk.version}</target>
+                </configuration>
+            </plugin>
+            <!-- JavaDoc plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.10.3</version>
+                <configuration>
+                    <aggregate>true</aggregate>
+                    <reportOutputDirectory>JavaDoc</reportOutputDirectory>
+                    <destDir>nc</destDir>
+                </configuration>
+            </plugin>
+            <!-- Maven dependency plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>2.10</version>
+                <executions>
+                    <execution>
+                        <id>package</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>tree</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>install</id>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/lib</outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

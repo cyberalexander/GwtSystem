@@ -1,0 +1,15 @@
+com.gwtsystem.client
+com.gwtsystem.client.gui
+com.gwtsystem.client.service
+com.gwtsystem.client.util
+com.gwtsystem.dao
+com.gwtsystem.domain
+com.gwtsystem.server.dao
+com.gwtsystem.server.dao.configuration
+com.gwtsystem.server.dao.exception
+com.gwtsystem.server.service
+com.gwtsystem.server.service.exception
+com.gwtsystem.server.util
+com.gwtsystem.service
+com.gwtsystem.shared.dto
+com.gwtsystem.util

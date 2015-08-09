@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" xmlns="isystem_test" targetNamespace="isystem_test">
+	<xsd:element name="dbmaintain_scripts" type="dbmaintain_scripts__type" />
+	<xsd:element name="T_CUSTOMERS" type="T_CUSTOMERS__type" />
+	<xsd:element name="T_CUSTOMER_TYPES" type="T_CUSTOMER_TYPES__type" />
+	<xsd:complexType name="dbmaintain_scripts__type">
+		<xsd:attribute name="succeeded" use="optional" />
+		<xsd:attribute name="file_last_modified_at" use="optional" />
+		<xsd:attribute name="executed_at" use="optional" />
+		<xsd:attribute name="checksum" use="optional" />
+		<xsd:attribute name="file_name" use="optional" />
+		<xsd:attribute name="version" use="optional" />
+	</xsd:complexType>
+	<xsd:complexType name="T_CUSTOMERS__type">
+		<xsd:attribute name="F_LAST_NAME" use="optional" />
+		<xsd:attribute name="F_MODIFIED_WHEN" use="optional" />
+		<xsd:attribute name="F_LAST_NAME_METAPHONE" use="optional" />
+		<xsd:attribute name="F_TITLE" use="optional" />
+		<xsd:attribute name="F_FIRST_NAME" use="optional" />
+		<xsd:attribute name="F_TYPE" use="optional" />
+		<xsd:attribute name="F_FIRST_NAME_METAPHONE" use="optional" />
+		<xsd:attribute name="F_CUSTOMER_ID" use="optional" />
+	</xsd:complexType>
+	<xsd:complexType name="T_CUSTOMER_TYPES__type">
+		<xsd:attribute name="F_CUSTOMER_TYPE_ID" use="optional" />
+		<xsd:attribute name="F_CUSTOMER_TYPE_CAPTION" use="optional" />
+	</xsd:complexType>
+</xsd:schema>
